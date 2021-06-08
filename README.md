@@ -1,6 +1,9 @@
-<img src="https://img.itch.zone/aW1nLzYxMjg3NDIucG5n/original/KjTak7.png" />
 
 <h1 align="center">Brave Heroes</h1>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/PedroHenriqueDevBR/Brave-Heroes/main/docs/images/brave-heroes-v2.png" width="200" />
+</p>
 
 <p align="center">
 Uma auxiliar de enfermagem recebe a missão de vacinar pessoas contra a COVID-19 nas áreas mais remotas. Para atingir o seu objetivo, essa auxiliar terá que ter muita DETERMINAÇÃO, para atravessar florestas e rios, enfrentando muitos obstáculos pelo caminho.
