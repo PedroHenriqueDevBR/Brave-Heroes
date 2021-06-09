@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/map/generic-map.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/Actors/GenericEnemie/Enemie.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Actors/Bird/Bird.tscn" type="PackedScene" id=3]
 
 [node name="GenericLevel" type="Node2D"]
 
@@ -17,46 +17,5 @@ position = Vector2( 40.0292, 456.683 )
 
 [node name="enemies" type="Node2D" parent="."]
 
-[node name="Enemie" parent="enemies" instance=ExtResource( 3 )]
-position = Vector2( 361.5, 492.713 )
-max_walk = 150
-
-[node name="Enemie2" parent="enemies" instance=ExtResource( 3 )]
-position = Vector2( 718.79, 491.815 )
-max_walk = 150
-
-[node name="Enemie3" parent="enemies" instance=ExtResource( 3 )]
-position = Vector2( 1302.63, 493.042 )
-max_walk = 150
-
-[node name="Enemie4" parent="enemies" instance=ExtResource( 3 )]
-position = Vector2( 1476.65, 366.147 )
-max_walk = 150
-
-[node name="Enemie5" parent="enemies" instance=ExtResource( 3 )]
-position = Vector2( 2382.83, 484.511 )
-max_walk = 300
-
-[node name="Enemie6" parent="enemies" instance=ExtResource( 3 )]
-position = Vector2( 2504.53, 446.021 )
-max_walk = 300
-
-[node name="Enemie7" parent="enemies" instance=ExtResource( 3 )]
-position = Vector2( 2638.61, 329.678 )
-max_walk = 300
-
-[node name="Enemie8" parent="enemies" instance=ExtResource( 3 )]
-position = Vector2( 3163.47, 494.303 )
-max_walk = 300
-
-[node name="Enemie9" parent="enemies" instance=ExtResource( 3 )]
-position = Vector2( 4288.35, 396.466 )
-max_walk = 200
-
-[node name="Enemie10" parent="enemies" instance=ExtResource( 3 )]
-position = Vector2( 4705.99, 268.591 )
-max_walk = 400
-
-[node name="Enemie11" parent="enemies" instance=ExtResource( 3 )]
-position = Vector2( 5517.52, 493.267 )
-max_walk = 500
+[node name="Bird" parent="enemies" instance=ExtResource( 3 )]
+position = Vector2( 1876.56, 333.361 )
