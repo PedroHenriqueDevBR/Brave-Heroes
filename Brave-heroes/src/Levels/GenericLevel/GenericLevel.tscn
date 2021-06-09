@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/map/generic-map.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Actors/Bird/Bird.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Actors/Frog/Frog.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Actors/GenericEnemie/Enemie.tscn" type="PackedScene" id=5]
 
 [node name="GenericLevel" type="Node2D"]
 
@@ -17,5 +19,52 @@ position = Vector2( 40.0292, 456.683 )
 
 [node name="enemies" type="Node2D" parent="."]
 
+[node name="Enemie" parent="enemies" instance=ExtResource( 5 )]
+position = Vector2( 359.526, 490.684 )
+max_walk = 140
+
+[node name="Enemie2" parent="enemies" instance=ExtResource( 5 )]
+position = Vector2( 736.369, 492.79 )
+max_walk = 140
+
+[node name="Enemie3" parent="enemies" instance=ExtResource( 5 )]
+position = Vector2( 1296.02, 495.449 )
+max_walk = 140
+
+[node name="Enemie4" parent="enemies" instance=ExtResource( 5 )]
+position = Vector2( 1538.65, 367.7 )
+max_walk = 140
+
+[node name="Enemie5" parent="enemies" instance=ExtResource( 5 )]
+position = Vector2( 2543.71, 395.567 )
+max_walk = 140
+
+[node name="Enemie6" parent="enemies" instance=ExtResource( 5 )]
+position = Vector2( 2635.19, 335.143 )
+max_walk = 140
+
+[node name="Enemie7" parent="enemies" instance=ExtResource( 5 )]
+position = Vector2( 2768.32, 324.42 )
+max_walk = 140
+
+[node name="Enemie8" parent="enemies" instance=ExtResource( 5 )]
+position = Vector2( 4272.2, 397.57 )
+max_walk = 140
+
+[node name="Enemie9" parent="enemies" instance=ExtResource( 5 )]
+position = Vector2( 4667.45, 266.392 )
+max_walk = 140
+
+[node name="Enemie10" parent="enemies" instance=ExtResource( 5 )]
+position = Vector2( 5358.86, 495.138 )
+max_walk = 140
+
 [node name="Bird" parent="enemies" instance=ExtResource( 3 )]
-position = Vector2( 1876.56, 333.361 )
+position = Vector2( 1876.38, 320.979 )
+
+[node name="Bird2" parent="enemies" instance=ExtResource( 3 )]
+position = Vector2( 3628.08, 350.846 )
+max_heigth = 75
+
+[node name="Frog" parent="enemies" instance=ExtResource( 4 )]
+position = Vector2( 3150.9, 494.045 )
