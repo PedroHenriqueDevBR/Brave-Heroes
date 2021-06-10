@@ -6,7 +6,7 @@ const GRAVITY: = 1000
 const UP: = Vector2.UP
 const stomp_inpulse: = 500
 var _velocity: = Vector2.ZERO
-var is_on_wather: = false
+export var is_on_water: = false
 var hp: = 2
 
 
@@ -18,6 +18,7 @@ func _physics_process(delta: float) -> void:
 	var jump = Input.is_action_just_pressed("ui_up")
 	var jump_stop = Input.is_action_just_released("ui_up")
 	var jump_pressed = Input.is_action_pressed("ui_up")
+	var down_pressed = Input.is_action_pressed("ui_down")
 	
 	if walk_left:
 		_velocity.x = -SPEED
@@ -31,14 +32,16 @@ func _physics_process(delta: float) -> void:
 		_velocity.x = 0
 		$AnimatedSprite.play('idle')
 		
-	if jump_pressed and is_on_wather:
+	if jump_pressed and is_on_water:
 		_velocity.y = JUMP_FORCE * 0.5
 	elif is_on_floor() and jump:
 		_velocity.y = JUMP_FORCE
 	elif not is_on_floor() and jump_stop and _velocity.y < 0:
 		_velocity.y *= 0.5
 	
-	if (is_on_wather):
+	if is_on_water and down_pressed:
+		_velocity.y *= 0.9
+	elif is_on_water:
 		_velocity.x *= 0.6
 		_velocity.y *= 0.8
 	_velocity = move_and_slide(_velocity, UP)
