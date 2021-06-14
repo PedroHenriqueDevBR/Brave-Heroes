@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/028_Joy Walks Away.ogg-b7dd3148631373277af83c2cc7412681.oggstr"
+
+[deps]
+
+source_file="res://assets/Music/theme/028_Joy Walks Away.ogg"
+dest_files=[ "res://.import/028_Joy Walks Away.ogg-b7dd3148631373277af83c2cc7412681.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,12 +1,25 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/map/generic-map.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Actors/Bird/Bird.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Actors/Frog/Frog.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Actors/GenericEnemie/Enemie.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/map/Mountains Background.png" type="Texture" id=6]
+[ext_resource path="res://assets/Music/theme/028_Joy Walks Away.ogg" type="AudioStream" id=7]
 
 [node name="GenericLevel" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 1024, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 510.18, 303.724 )
+scale = Vector2( 3.3325, 4.44198 )
+texture = ExtResource( 6 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -68,3 +81,7 @@ max_heigth = 75
 
 [node name="Frog" parent="enemies" instance=ExtResource( 4 )]
 position = Vector2( 3150.9, 494.045 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true

@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/map/generic-map.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15.9611, 15.9563 )
+
+[sub_resource type="SegmentShape2D" id=2]
+a = Vector2( 16.1784, -13.9178 )
+b = Vector2( -14.1913, 16.234 )
+
+[node name="map" type="Node2D"]
+
+[node name="0" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="StaticBody2D" parent="0"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0/Area2D"]
+shape = SubResource( 1 )
+
+[node name="1" type="Sprite" parent="."]
+position = Vector2( 49.0931, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 65, 0, 32, 32 )
+
+[node name="Area2D" type="StaticBody2D" parent="1"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="1/Area2D"]
+position = Vector2( 0.771072, 0.771072 )
+shape = SubResource( 2 )
+
+[node name="2" type="Sprite" parent="."]
+position = Vector2( 98.8496, -0.663422 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
