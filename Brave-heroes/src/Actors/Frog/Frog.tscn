@@ -22,9 +22,11 @@ extents = Vector2( 15.8182, 15.7125 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 13.9385, 5.06083 )
 
-[node name="Frog" type="KinematicBody2D"]
-collision_layer = 2
-collision_mask = 15
+[node name="Frog" type="KinematicBody2D" groups=[
+"Enemy",
+]]
+collision_layer = 4
+collision_mask = 3
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -44,7 +46,9 @@ position = Vector2( 0, 6.62494 )
 process_parent = true
 physics_process_parent = true
 
-[node name="PlayerDetector" type="Area2D" parent="."]
+[node name="PlayerDetector" type="Area2D" parent="." groups=[
+"Enemy",
+]]
 modulate = Color( 0.00392157, 0.0862745, 0.980392, 1 )
 collision_layer = 0
 

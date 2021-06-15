@@ -23,9 +23,11 @@ height = 1.80215
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 13.9385, 4.5761 )
 
-[node name="Crab" type="KinematicBody2D"]
-collision_layer = 2
-collision_mask = 15
+[node name="Crab" type="KinematicBody2D" groups=[
+"Enemy",
+]]
+collision_layer = 4
+collision_mask = 3
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -45,7 +47,9 @@ physics_process_parent = true
 position = Vector2( 0.338373, -0.0011034 )
 shape = SubResource( 3 )
 
-[node name="PlayerDetector" type="Area2D" parent="."]
+[node name="PlayerDetector" type="Area2D" parent="." groups=[
+"Enemy",
+]]
 modulate = Color( 0.00392157, 0.0862745, 0.980392, 1 )
 collision_layer = 0
 

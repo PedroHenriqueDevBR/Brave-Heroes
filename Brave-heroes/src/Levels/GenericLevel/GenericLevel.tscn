@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/map/generic-map.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Player/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://src/Actors/GenericEnemie/Enemie.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/map/Mountains Background.png" type="Texture" id=6]
 [ext_resource path="res://assets/Music/theme/028_Joy Walks Away.ogg" type="AudioStream" id=7]
+[ext_resource path="res://src/Objects/Mango/Mango.tscn" type="PackedScene" id=8]
 
 [node name="GenericLevel" type="Node2D"]
 
@@ -82,6 +83,14 @@ max_heigth = 75
 [node name="Frog" parent="enemies" instance=ExtResource( 4 )]
 position = Vector2( 3150.9, 494.045 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="music" type="Node2D" parent="."]
+position = Vector2( 152, 432 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="music"]
 stream = ExtResource( 7 )
 autoplay = true
+
+[node name="itens" type="Node2D" parent="."]
+
+[node name="Mango" parent="itens" instance=ExtResource( 8 )]
+position = Vector2( 152, 432 )
