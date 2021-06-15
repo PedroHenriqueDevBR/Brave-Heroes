@@ -49,6 +49,8 @@ func _physics_process(delta: float) -> void:
 		_velocity.x *= 0.6
 		_velocity.y *= 0.8
 	_velocity = move_and_slide(_velocity, UP)
+	
+	$Info/MangoCounter.text = 'Mangas: ' + String(mango_counter)
 
 
 func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vector2:
@@ -81,5 +83,3 @@ func is_player_out_of_the_camera() -> bool:
 
 func get_mango() -> void:
 	mango_counter += 1
-	print('mango_counter')
-	print(mango_counter)
