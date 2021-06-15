@@ -75,7 +75,7 @@ __meta__ = {
 }
 
 [node name="mango" type="Sprite" parent="."]
-position = Vector2( 0, -4.00043 )
+position = Vector2( 0, -4.99749 )
 scale = Vector2( 0.0535038, 0.0524609 )
 texture = ExtResource( 1 )
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/map/generic-map.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Player/Player.tscn" type="PackedScene" id=2]
@@ -8,8 +8,15 @@
 [ext_resource path="res://assets/map/Mountains Background.png" type="Texture" id=6]
 [ext_resource path="res://assets/Music/theme/028_Joy Walks Away.ogg" type="AudioStream" id=7]
 [ext_resource path="res://src/Objects/Mango/Mango.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Levels/Pause/Pause.tscn" type="PackedScene" id=9]
 
 [node name="GenericLevel" type="Node2D"]
+pause_mode = 1
+
+[node name="Interface" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="Pause" parent="Interface" instance=ExtResource( 9 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
