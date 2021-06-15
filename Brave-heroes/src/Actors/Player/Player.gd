@@ -8,9 +8,13 @@ const stomp_inpulse: = 500
 var _velocity: = Vector2.ZERO
 export var is_on_water: = false
 var hp: = 2
+var mango_counter: = 0
 
 
 func _physics_process(delta: float) -> void:
+	if is_player_out_of_the_camera():
+		die()
+		
 	_velocity.y += GRAVITY * delta
 	
 	var walk_left = Input.is_action_pressed("ui_left")
@@ -58,7 +62,8 @@ func die() -> void:
 
 
 func _on_EnemyDetector_area_entered(area: Area2D) -> void:
-	_velocity = calculate_stomp_velocity(_velocity, stomp_inpulse)
+	if area.is_in_group('Enemy'):
+		_velocity = calculate_stomp_velocity(_velocity, stomp_inpulse)
 
 
 func _on_EnemyDetector_body_entered(body: Node) -> void:
@@ -66,3 +71,15 @@ func _on_EnemyDetector_body_entered(body: Node) -> void:
 		hp -= 1
 	if hp <= 0:
 		die()
+
+
+func is_player_out_of_the_camera() -> bool:
+	if $".".position.y > 610:
+		return true
+	return false
+
+
+func get_mango() -> void:
+	mango_counter += 1
+	print('mango_counter')
+	print(mango_counter)
