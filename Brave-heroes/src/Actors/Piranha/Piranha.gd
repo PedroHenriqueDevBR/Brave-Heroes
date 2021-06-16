@@ -35,4 +35,5 @@ func _physics_process(delta: float) -> void:
 
 func _body_entered(body: Node) -> void:
 	if body.global_position.y > get_node("PlayerDetector").global_position.y:
-		return
+		$CollisionShape2D.disabled = true
+		queue_free()
