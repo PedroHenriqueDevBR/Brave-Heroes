@@ -26,5 +26,10 @@ func _physics_process(delta: float) -> void:
 func _body_entered(body: Node) -> void:
 	if body.global_position.y > get_node("PlayerDetector").global_position.y:
 		return
-	get_node("CollisionShape2D").disabled = true
+	if body.is_in_group('Player'):
+		$CollisionShape2D.disabled = true
+		$music_effect/Die.play()
+
+
+func _on_Die_finished() -> void:
 	queue_free()

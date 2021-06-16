@@ -19,7 +19,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	time_left -= delta
 	if time_left <= 0:
-		die()
+		die_with_audio()
 	var seconds = fmod(time_left, 60)
 	$Info/Timer.text = '%02d' % [seconds]
 
@@ -53,6 +53,7 @@ func _physics_process(delta: float) -> void:
 		_velocity.y = JUMP_FORCE * 0.5
 	elif is_on_floor() and jump:
 		_velocity.y = JUMP_FORCE
+		$music_effects/Jump.play()
 	elif not is_on_floor() and jump_stop and _velocity.y < 0:
 		_velocity.y *= 0.5
 	
@@ -70,10 +71,6 @@ func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vecto
 		return out
 
 
-func die() -> void:
-	get_tree().reload_current_scene()
-
-
 func _on_EnemyDetector_area_entered(area: Area2D) -> void:
 	if area.is_in_group('Enemy'):
 		_velocity = calculate_stomp_velocity(_velocity, stomp_inpulse)
@@ -83,7 +80,7 @@ func _on_EnemyDetector_body_entered(body: Node) -> void:
 	if not body.get_groups().empty():
 		hp -= 1
 	if hp <= 0:
-		die()
+		die_with_audio()
 
 
 func is_player_out_of_the_camera() -> bool:
@@ -95,3 +92,15 @@ func is_player_out_of_the_camera() -> bool:
 func get_mango() -> void:
 	mango_counter += 1
 	$Info/MangoCounter.text = 'Mangas: ' + String(mango_counter)
+
+
+func die_with_audio() -> void:
+	$music_effects/Lose.play()
+
+
+func die() -> void:
+	get_tree().reload_current_scene()
+
+
+func _on_Lose_finished() -> void:
+	die()
