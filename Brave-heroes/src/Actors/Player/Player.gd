@@ -11,7 +11,6 @@ var hp: = 2
 var mango_counter: = 0
 var time_left: = 60.0
 
-
 func _ready() -> void:
 	$Info/MangoCounter.text = 'Mangas: ' + String(mango_counter)
 
@@ -19,7 +18,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	time_left -= delta
 	if time_left <= 0:
-		die_with_audio()
+		die()
 	var seconds = fmod(time_left, 60)
 	$Info/Timer.text = '%02d' % [seconds]
 
@@ -62,6 +61,7 @@ func _physics_process(delta: float) -> void:
 	elif is_on_water:
 		_velocity.x *= 0.6
 		_velocity.y *= 0.8
+		
 	_velocity = move_and_slide(_velocity, UP)
 
 
