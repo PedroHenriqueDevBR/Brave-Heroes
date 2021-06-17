@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FunnyBoxes.ogg-0f426123ef6cf4e368f9b9a7ce1a5892.oggstr"
+
+[deps]
+
+source_file="res://assets/Music/theme/FunnyBoxes.ogg"
+dest_files=[ "res://.import/FunnyBoxes.ogg-0f426123ef6cf4e368f9b9a7ce1a5892.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -20,6 +20,8 @@ func _process(delta: float) -> void:
 	if time_left <= 0:
 		die()
 	var seconds = fmod(time_left, 60)
+	if seconds <= 10 and not $music_effects/timer.playing:
+		time_running_out()
 	$Info/Timer.text = '%02d' % [seconds]
 
 
@@ -95,7 +97,13 @@ func get_mango() -> void:
 
 
 func die_with_audio() -> void:
+	$AnimatedSprite.visible = false
+	$CollisionShape2D.disabled = true
 	$music_effects/Lose.play()
+
+
+func time_running_out() -> void:
+	$music_effects/timer.play()
 
 
 func die() -> void:

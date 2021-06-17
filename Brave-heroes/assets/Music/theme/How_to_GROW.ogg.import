@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/How_to_GROW.ogg-c440013e01c8ded076ca3f6aea822c8e.oggstr"
+
+[deps]
+
+source_file="res://assets/Music/theme/How_to_GROW.ogg"
+dest_files=[ "res://.import/How_to_GROW.ogg-c440013e01c8ded076ca3f6aea822c8e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
