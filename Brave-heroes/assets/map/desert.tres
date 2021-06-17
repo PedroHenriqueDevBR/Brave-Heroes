@@ -3,10 +3,10 @@
 [ext_resource path="res://assets/map/desert.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16, 8 )
+extents = Vector2( 16, 16 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 16, 8 )
+extents = Vector2( 16, 16 )
 
 [resource]
 0/name = "0"
@@ -17,8 +17,8 @@ extents = Vector2( 16, 8 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 16, 16 )
 0/navigation_offset = Vector2( 16, 16 )
-0/shape_offset = Vector2( 16, 8 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 16, 8 )
+0/shape_offset = Vector2( 16, 16 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 16, 16 )
 0/shape = SubResource( 1 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
@@ -27,7 +27,7 @@ extents = Vector2( 16, 8 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 8 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
 } ]
 0/z_index = 0
 1/name = "1"
@@ -38,8 +38,8 @@ extents = Vector2( 16, 8 )
 1/tile_mode = 0
 1/occluder_offset = Vector2( 16, 16 )
 1/navigation_offset = Vector2( 16, 16 )
-1/shape_offset = Vector2( 16, 8 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 16, 8 )
+1/shape_offset = Vector2( 16, 16 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 16, 16 )
 1/shape = SubResource( 2 )
 1/shape_one_way = false
 1/shape_one_way_margin = 1.0
@@ -48,7 +48,7 @@ extents = Vector2( 16, 8 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 2 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 8 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
 } ]
 1/z_index = 0
 2/name = "2"

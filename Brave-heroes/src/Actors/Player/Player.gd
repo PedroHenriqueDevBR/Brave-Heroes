@@ -99,6 +99,7 @@ func get_mango() -> void:
 func die_with_audio() -> void:
 	$AnimatedSprite.visible = false
 	$CollisionShape2D.disabled = true
+	$EnemyDetector.visible = false
 	$music_effects/Lose.play()
 
 

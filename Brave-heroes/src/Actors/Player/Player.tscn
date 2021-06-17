@@ -31,7 +31,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 15.3605, 15.9157 )
+extents = Vector2( 15.3605, 15.7216 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 15.7901, 15.8163 )
@@ -71,6 +71,7 @@ limit_smoothed = true
 smoothing_enabled = true
 
 [node name="EnemyDetector" type="Area2D" parent="."]
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
 shape = SubResource( 5 )

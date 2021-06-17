@@ -48,7 +48,7 @@ animations = [ {
 radius = 14.6524
 height = 1.80215
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=11]
 size = 6
 outline_size = 1
 outline_color = Color( 0.00392157, 0.917647, 0.988235, 1 )
@@ -65,7 +65,7 @@ script = ExtResource( 2 )
 position = Vector2( 0.330547, -0.220366 )
 frames = SubResource( 9 )
 animation = "run"
-frame = 7
+frame = 2
 playing = true
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
@@ -83,7 +83,7 @@ margin_left = -27.4616
 margin_top = -23.0233
 margin_right = 42.5384
 margin_bottom = -9.02333
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 11 )
 text = "Caranguejo"
 __meta__ = {
 "_edit_use_anchors_": false
