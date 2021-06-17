@@ -259,4 +259,4 @@ position = Vector2( 120, 518.477 )
 
 [node name="VaccineBox" parent="." instance=ExtResource( 6 )]
 position = Vector2( 5552, 515.377 )
-next_scene_path = "res://src/Levels/Menu/Menu.tscn"
+next_scene_path = "res://src/Levels/Level04-Water/level04.tscn"

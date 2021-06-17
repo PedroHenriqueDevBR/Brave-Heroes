@@ -100,6 +100,6 @@ custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-text = "Estou pronto!"
+text = "Desafio aceito!"
 flat = true
 [connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer/start_game" to="." method="_on_start_game_pressed"]

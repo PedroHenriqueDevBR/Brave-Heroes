@@ -1,12 +1,12 @@
 extends KinematicBody2D
 
-const speed: = Vector2(120.0, 75.0)
+const speed: = Vector2(170.0, 75.0)
 const gravity: = 0.0
 const UP: = Vector2.UP
 var _velocity: = Vector2.ZERO
 export var max_walk: = 200;
 var walk_count: = 0;
-export var max_height: = 40;
+export var max_height: = 50;
 var height_count: = 0;
 export var walk_to_left: = true
 
