@@ -40,15 +40,10 @@ func _physics_process(delta: float) -> void:
 	
 	if walk_left:
 		_velocity.x = -SPEED
-		$AnimatedSprite.flip_h = true
-		$AnimatedSprite.play('run')
 	elif walk_right:
 		_velocity.x = SPEED
-		$AnimatedSprite.flip_h = false
-		$AnimatedSprite.play('run')
 	else:
 		_velocity.x = 0
-		$AnimatedSprite.play('idle')
 		
 	if jump_pressed and is_on_water:
 		_velocity.y = JUMP_FORCE * 0.5
@@ -63,8 +58,31 @@ func _physics_process(delta: float) -> void:
 	elif is_on_water:
 		_velocity.x *= 0.6
 		_velocity.y *= 0.8
-		
+	
+	play_animation(walk_left, walk_right, is_on_water)
 	_velocity = move_and_slide(_velocity, UP)
+	
+	
+func play_animation(walk_left: bool, walk_right: bool, is_on_water: bool) -> void:
+	if walk_left:
+		$AnimatedSprite.flip_h = true
+		$AnimatedSprite.play('run')
+		if is_on_water:
+			$AnimatedSprite.rotation_degrees = -70
+			$AnimatedSprite.play('jump')
+	elif walk_right:
+		$AnimatedSprite.flip_h = false
+		$AnimatedSprite.play('run')
+		if is_on_water:
+			$AnimatedSprite.rotation_degrees = 70
+			$AnimatedSprite.play('jump')
+	else:
+		$AnimatedSprite.play('idle')
+		if is_on_water:
+			$AnimatedSprite.rotation_degrees = 0
+	
+	if not is_on_floor() and not is_on_water:
+		$AnimatedSprite.play('jump')
 
 
 func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vector2:
