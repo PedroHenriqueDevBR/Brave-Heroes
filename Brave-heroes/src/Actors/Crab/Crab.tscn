@@ -65,7 +65,6 @@ script = ExtResource( 2 )
 position = Vector2( 0.330547, -0.220366 )
 frames = SubResource( 9 )
 animation = "run"
-frame = 2
 playing = true
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]

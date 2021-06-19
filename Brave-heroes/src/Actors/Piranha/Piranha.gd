@@ -9,6 +9,7 @@ var walk_count: = 0;
 export var max_height: = 50;
 var height_count: = 0;
 export var walk_to_left: = true
+var flip_h: = false
 
 
 func _ready() -> void:
@@ -25,6 +26,8 @@ func _physics_process(delta: float) -> void:
 	if walk_count >= max_walk:
 		_velocity.x  *= -1.0
 		walk_count = 0
+		flip_h = !flip_h
+		$AnimatedSprite.flip_h = flip_h
 	if height_count >= max_height:
 		_velocity.y  *= -1.0
 		height_count = 0

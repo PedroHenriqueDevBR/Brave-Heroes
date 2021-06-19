@@ -50,7 +50,7 @@ position = Vector2( 11.6374, 9.13104 )
 scale = Vector2( 0.641855, 0.641855 )
 frames = SubResource( 5 )
 animation = "run"
-frame = 3
+frame = 1
 playing = true
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]

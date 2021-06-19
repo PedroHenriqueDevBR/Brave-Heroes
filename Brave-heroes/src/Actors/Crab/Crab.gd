@@ -7,6 +7,7 @@ var _velocity: = Vector2.ZERO
 export var max_walk: = 200;
 var walk_count: = 0;
 export var walk_to_left: = true
+var flit_h: = false
 
 
 func _ready() -> void:
@@ -20,6 +21,8 @@ func _physics_process(delta: float) -> void:
 	if walk_count >= max_walk:
 		_velocity  *= -1.0
 		walk_count = 0
+		flit_h = !flit_h
+		$AnimatedSprite.flip_h = flit_h
 	walk_count += 1
 	_velocity.y = move_and_slide(_velocity, UP).y
 
