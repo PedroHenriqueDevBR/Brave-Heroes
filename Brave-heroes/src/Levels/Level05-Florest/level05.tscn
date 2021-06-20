@@ -133,7 +133,8 @@ position = Vector2( 5304, 154.219 )
 position = Vector2( 5260.93, 305.716 )
 
 [node name="Bird15" parent="enemies" instance=ExtResource( 13 )]
-position = Vector2( 5512, 460.559 )
+position = Vector2( 5512.34, 436.817 )
+max_heigth = 40
 
 [node name="Frog" parent="enemies" instance=ExtResource( 12 )]
 position = Vector2( 208, 560 )
@@ -451,4 +452,4 @@ time_left = 120.0
 
 [node name="VaccineBox" parent="." instance=ExtResource( 6 )]
 position = Vector2( 5648, 544 )
-next_scene_path = "res://src/Levels/Menu/Menu.tscn"
+next_scene_path = "res://src/Levels/Level - End/LevelEnd.tscn"

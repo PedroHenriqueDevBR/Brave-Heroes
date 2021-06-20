@@ -22,4 +22,5 @@ func _on_ResumeButton_pressed() -> void:
 
 
 func _on_QuitButton_pressed() -> void:
+	set_paused(false)
 	get_tree().change_scene("res://src/Levels/Menu/Menu.tscn")
