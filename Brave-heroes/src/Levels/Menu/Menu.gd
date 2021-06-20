@@ -13,4 +13,4 @@ func _on_Button_pressed() -> void:
 
 
 func start_game() -> void:
-	get_tree().change_scene("res://src/Levels/Level0/Level0.tscn")
+	get_tree().change_scene("res://src/Levels/Level - welcome/Level0.tscn")

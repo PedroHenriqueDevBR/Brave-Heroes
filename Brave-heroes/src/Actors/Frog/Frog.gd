@@ -11,10 +11,6 @@ func _on_Timer_timeout() -> void:
 		_velocity.y += JUMP_HEIGHT
 
 
-func _ready() -> void:
-	set_physics_process(false)
-
-
 func _physics_process(delta: float) -> void:
 	_velocity.y += gravity * delta
 	_velocity = move_and_slide(_velocity, UP)

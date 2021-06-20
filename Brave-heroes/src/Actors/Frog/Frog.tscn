@@ -56,18 +56,11 @@ script = ExtResource( 2 )
 position = Vector2( 0.330547, -0.220366 )
 frames = SubResource( 6 )
 animation = "run"
-frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.338373, 1.71601 )
 shape = SubResource( 7 )
-
-[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
-visible = false
-position = Vector2( 0, 6.62494 )
-process_parent = true
-physics_process_parent = true
 
 [node name="PlayerDetector" type="Area2D" parent="." groups=[
 "Enemy",

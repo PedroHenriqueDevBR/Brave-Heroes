@@ -9,9 +9,11 @@ var _velocity: = Vector2.ZERO
 export var is_on_water: = false
 var hp: = 2
 var mango_counter: = 0
-var time_left: = 60.0
+export var time_left: = 60.0
+var start_time: = 60.0
 
 func _ready() -> void:
+	start_time = time_left
 	$Info/MangoCounter.text = 'Mangas: ' + String(mango_counter)
 
 
@@ -19,7 +21,7 @@ func _process(delta: float) -> void:
 	time_left -= delta
 	if time_left <= 0:
 		die()
-	var seconds = fmod(time_left, 60)
+	var seconds = fmod(time_left, start_time)
 	if seconds <= 10 and not $music_effects/timer.playing:
 		time_running_out()
 	$Info/Timer.text = '%02d' % [seconds]
