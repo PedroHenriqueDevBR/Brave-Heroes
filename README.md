@@ -37,7 +37,3 @@ Os controles do jogo são controles já conhecidos dos jogadores, abaixo a apres
 | W ou seta para cima       | Salto do personagem                     |
 | S ou seta para baixo      | Personagem se abaixa                    |
 
-
-# :zombie_man: Inimigos
-
-**Covid 19** - Esse será o Boss do jogo, o principal inimigo a ser derrotado.
